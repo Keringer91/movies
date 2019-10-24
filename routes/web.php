@@ -13,5 +13,11 @@
 
 use App\Http\Controllers\MoviesController;
 
-Route::get('/', 'MoviesController@index');
+
+
+//Route::get('/', 'MoviesController@index');
+
+Route::get('/movies', 'MoviesController@index')->name('movies.movies');
+Route::get('/add', 'MoviesController@add')->name('movies.add');
+
 
