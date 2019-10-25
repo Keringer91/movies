@@ -12,4 +12,22 @@
         <br>
         @endif
     </div>
+
+    @if (count($movie->comments))
+    <div class="container">
+        <h3>Comments: </h3>
+
+        <ul class="list-unstyled">
+            @foreach ($movie->comments as $comment)
+                <li class="border-bottom">
+                    <p>
+                        {{ $comment->content }}
+                        {{ $comment->created_at }}
+                    </p>
+                </li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+
 @endsection
