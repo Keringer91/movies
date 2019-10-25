@@ -20,5 +20,7 @@ use App\Http\Controllers\MoviesController;
 Route::get('/movies', 'MoviesController@index')->name('movies.movies');
 Route::get('/add', 'MoviesController@create')->name('movies.add');
 Route::get('/movies/{id}', 'MoviesController@show')->name('movies.movie');
+Route::get('/create', 'MoviesController@create')->name('movies.create');
+Route::post('/create', 'MoviesController@store')->name('movies.create');
 
 

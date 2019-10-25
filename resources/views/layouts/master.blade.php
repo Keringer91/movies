@@ -1,42 +1,33 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-    <title>
-    
-        @yield('title')
-
-    </title>
-
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>
+            @yield('title')
+        </title>
+        <style>
             /* stylelint-disable selector-list-comma-newline-after */
             .blog-header {
             line-height: 1;
             border-bottom: 1px solid #e5e5e5;
             }
-
+​
             .blog-header-logo {
             font-family: "Playfair Display", Georgia, "Times New Roman", serif;
             font-size: 2.25rem;
             }
-
+​
             .blog-header-logo:hover {
             text-decoration: none;
             }
-
+​
             h1, h2, h3, h4, h5, h6 {
             font-family: "Playfair Display", Georgia, "Times New Roman", serif;
             }
-
+​
             .display-4 {
             font-size: 2.5rem;
             }
@@ -45,14 +36,14 @@
                 font-size: 3rem;
             }
             }
-
+​
             .nav-scroller {
             position: relative;
             z-index: 2;
             height: 2.75rem;
             overflow-y: hidden;
             }
-
+​
             .nav-scroller .nav {
             display: -ms-flexbox;
             display: flex;
@@ -65,28 +56,28 @@
             white-space: nowrap;
             -webkit-overflow-scrolling: touch;
             }
-
+​
             .nav-scroller .nav-link {
             padding-top: .75rem;
             padding-bottom: .75rem;
             font-size: .875rem;
             }
-
+​
             .card-img-right {
             height: 100%;
             border-radius: 0 3px 3px 0;
             }
-
+​
             .flex-auto {
             -ms-flex: 0 0 auto;
             flex: 0 0 auto;
             }
-
+​
             .h-250 { height: 250px; }
             @media (min-width: 768px) {
             .h-md-250 { height: 250px; }
             }
-
+​
             /*
             * Blog name and description
             */
@@ -99,13 +90,13 @@
             font-size: 1.1rem;
             color: #999;
             }
-
+​
             @media (min-width: 40em) {
             .blog-title {
                 font-size: 3.5rem;
             }
             }
-
+​
             /* Pagination */
             .blog-pagination {
             margin-bottom: 4rem;
@@ -113,7 +104,7 @@
             .blog-pagination > .btn {
             border-radius: 2rem;
             }
-
+​
             /*
             * Blog posts
             */
@@ -128,7 +119,7 @@
             margin-bottom: 1.25rem;
             color: #999;
             }
-
+​
             /*
             * Footer
             */
@@ -143,28 +134,19 @@
             margin-bottom: 0;
             }
         </style>
+    </head>
+    <body>
+        <div class="links">
+            <a class="nav-item nav-link" href="{{ route('movies.movies') }}">All movies</a>
+            <a class="nav-item nav-link" href="{{ route('movies.add') }}">Add a new movie</a>
+        </div>
 
-</head>
-
-<body>
-
-    
-
-    <div class="links">
-        <a class="nav-item nav-link" href="{{ route('movies.movies') }}">All movies</a>
-        <a class="nav-item nav-link" href="{{ route('movies.add') }}">Add a new movie</a>
-    </div>
-
-    <div class="container-p3";>
+        <div class="container pt-4">
             @yield('content')
-    </div> 
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-</body>
-
+        </div>
+​
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
 </html>
