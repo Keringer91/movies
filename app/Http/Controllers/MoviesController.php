@@ -27,12 +27,13 @@ class MoviesController extends Controller
 
     public function store(Request $request)
     {
+        $time = date('Y');
         $this->validate(request(),[
             'title' => 'required', 
-            'year' => 'required', 
+            'year' => 'required | between:1900, $time', 
             'genre' => 'required',
             'director' => 'required',
-            'storyline' => 'required'
+            'storyline' => 'required | max:1000'
             ]);
 
         $movie = Movie::create(request()->all());
